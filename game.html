@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item2">
+        <ul class="menu">
+          <li class="nav"><a href="index.html">Home</a></li>
+          <li class="nav"><a class="activeNav" href="game.html">Maze Runner</a></li>
+          <li class="nav"><a href="about.html">About</a></li>
+          <li class="nav"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+
+      <div class="item3">
+        <div id="unity-container" class="unity-desktop" style="padding-top: 50px;">
+          <canvas style="border: 10px solid black; border-radius: 50px;" id="unity-canvas"></canvas>
+          <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full"></div>
+            </div>
+          </div>
+          <div id="unity-mobile-warning">
+            WebGL builds are not supported on mobile devices.
+          </div>
+          <div id="unity-footer" style="padding-bottom: 50px;">
+            <div id="unity-fullscreen-button"></div>
+            <div id="unity-build-title">Go Fullscreen</div>
+          </div>
+
+        </div>    
+        <script src="script.js"></script> 
+
+
+      </div>
+
+      <div class="item3">
+        <p>hallo</p>
+      </div>
+
+      <!--position:fixed in position:relative ändern, falls es ein Scrollbar gibt-->
+      <div class="item4" style="position: fixed; left: 0;bottom: 0; width: 100%;">
+          <a>Copyright by Maze Runner © |</a>
+          <a style="color: grey;" href="impressum.html">Impressum</a>
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+
+
+</html>

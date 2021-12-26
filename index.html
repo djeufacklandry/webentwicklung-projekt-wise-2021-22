@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
   </head>
   <body>
     <div class="grid-container">
@@ -12,22 +12,27 @@
           <h1 class="centered">Maze Runner</h1>
 
           <video autoplay muted loop id="myVideo">
-            <source src="Test.mp4" type="video/mp4">
+            <source src="escape_game.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
 
         </div>
         <div class="item2">
-          Menu >
-          <p>navbar</p>
+          <ul class="menu">
+            <li class="nav"><a class="activeNav" href="index.html">Home</a></li>
+            <li class="nav"><a href="game.html">Maze Runner</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="contact.html">Kontakt</a></li>
+          </ul>
         </div>
-        <div class="item3">
+
+        <div class="item3" style="padding-top: 50px;">
           main >
           <p>
             Hallo Welt
           </p>
         </div>
-        <div class="item4">
+        <div class="item4" style="position: relative; left: 0;bottom: 0; width: auto">
             <a>Copyright by Maze Runner © |</a>
             <a style="color: grey;" href="impressum.html">Impressum</a>
         </div>
