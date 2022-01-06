@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="CSS/style.css">
+
+
+    <!--Press Start Font Family Für Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet"> 
+    
   </head>
   <body>
     <div class="grid-container">
-        <div class="item1">
-          <h1 class="centered">Maze Runner</h1>
+      
+        <section class="showcase">
+          <div class="video-container">
+            <video src="Videos/Test.mp4" autoplay muted loop></video>
+          </div>
+          <div class="content">
+            <h1>Maze Runner</h1>
+          </div>
+        </section>
 
-          <video autoplay muted loop id="myVideo">
-            <source src="escape_game.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+        <header>
+          <nav style="background-color: #333; border-radius: 0px 0px 30px 30px;">
+            <ul class="menu">
+              <li class="nav"><a class="activeNav" href="index.html">Home</a></li>
+              <li class="nav"><a href="game.html">Maze Runner</a></li>
+              <li class="nav"><a href="about.html">About</a></li>
+              <li class="nav"><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+        </header>
 
-        </div>
-        <div class="item2">
-          <ul class="menu">
-            <li class="nav"><a class="activeNav" href="index.html">Home</a></li>
-            <li class="nav"><a href="game.html">Maze Runner</a></li>
-            <li class="nav"><a href="about.html">About</a></li>
-            <li class="nav"><a href="contact.html">Kontakt</a></li>
-          </ul>
-        </div>
+        <main style="padding-top: 100px;">
+          <video class="responsive-home-video" width="900px" controls>
+            <source src="Videos/Maze Runner.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video> 
+        </main>
 
-        <div class="item3" style="padding-top: 50px;">
-          main >
-          <p>
-            Hallo Welt
-          </p>
-        </div>
-        <div class="item4" style="position: relative; left: 0;bottom: 0; width: auto">
+        <footer style="position: relative; left: 0;bottom: 0; width: auto">
             <a>Copyright by Maze Runner © |</a>
-            <a style="color: grey;" href="impressum.html">Impressum</a>
-        </div>
+            <a class="impressum" style="color: grey;" href="impressum.html">Impressum</a>
+        </footer>
 
     </div>
 

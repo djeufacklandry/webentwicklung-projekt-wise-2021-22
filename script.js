@@ -1,14 +1,14 @@
-/*Uunity WebGL Javascript Code*/ 
+/*Unity Game - Java Script*/
 var buildUrl = "Build";
-var loaderUrl = buildUrl + "/Escape Game.loader.js";
+var loaderUrl = buildUrl + "/Maze Runner Vers. 1.01.loader.js";
 var config = {
-  dataUrl: buildUrl + "/Escape Game.data",
-  frameworkUrl: buildUrl + "/Escape Game.framework.js",
-  codeUrl: buildUrl + "/Escape Game.wasm",
+  dataUrl: buildUrl + "/Maze Runner Vers. 1.01.data",
+  frameworkUrl: buildUrl + "/Maze Runner Vers. 1.01.framework.js",
+  codeUrl: buildUrl + "/Maze Runner Vers. 1.01.wasm",
   streamingAssetsUrl: "StreamingAssets",
-  companyName: "DefaultCompany",
-  productName: "Escape Game",
-  productVersion: "0.1",
+  companyName: "DanDev",
+  productName: "Maze Runner",
+  productVersion: "1.01",
 };
 
 var container = document.querySelector("#unity-container");

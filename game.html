@@ -6,55 +6,88 @@
     <title>Home</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <!--Press Start Font Family Für Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <div class="grid-container">
-      <div class="item2">
-        <ul class="menu">
-          <li class="nav"><a href="index.html">Home</a></li>
-          <li class="nav"><a class="activeNav" href="game.html">Maze Runner</a></li>
-          <li class="nav"><a href="about.html">About</a></li>
-          <li class="nav"><a href="contact.html">Kontakt</a></li>
-        </ul>
-      </div>
+      <header>
+        <nav>
+          <ul class="menu">
+            <li class="nav"><a href="index.html">Home</a></li>
+            <li class="nav"><a class="activeNav" href="game.html">Maze Runner</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
 
-
-      <div class="item3">
+      <section class="unity-box-spacer">
         <div id="unity-container" class="unity-desktop" style="padding-top: 50px;">
           <canvas style="border: 10px solid black; border-radius: 50px;" id="unity-canvas"></canvas>
           <div id="unity-loading-bar">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
-              <div id="unity-progress-bar-full"></div>
+            <div id="unity-progress-bar-full"></div>
             </div>
           </div>
           <div id="unity-mobile-warning">
             WebGL builds are not supported on mobile devices.
           </div>
-          <div id="unity-footer" style="padding-bottom: 50px;">
+          <div id="unity-footer">
             <div id="unity-fullscreen-button"></div>
             <div id="unity-build-title">Go Fullscreen</div>
           </div>
+        </div >
 
-        </div>    
-        <script src="script.js"></script> 
+          
+      </section>
+            
 
+      <main>
+        <div class="center-content">
+          <div class="wrapper">
+            <h1 class="headline">User manual</h1>
+          </div>
+          <div class="wrapper">
+            <div class="text"><h1>Player</h1></div>
+            <div><img src="Bilder/player.png" width="500px"alt="player-orange-2FrontSpotlights"></div>
+          </div>
 
-      </div>
+          <div class="wrapper" style="justify-content: right;">
+            <div class="text"><h1>Enemy</h1></div>
+            <div><img src="Bilder/enemy.png" width="500px"alt="enemy-white-2BackSpotlights"></div>
+          </div>
 
-      <div class="item3">
-        <p>hallo</p>
-      </div>
+          <div class="wrapper">
+            <div class="text"><h1>Start</h1></div>
+            <div><img src="Bilder/start.png" width="500px"alt="start-green-2FrontSpotlights"></div>
+          </div>
 
-      <!--position:fixed in position:relative ändern, falls es ein Scrollbar gibt-->
-      <div class="item4" style="position: fixed; left: 0;bottom: 0; width: 100%;">
+          <div class="wrapper" style="justify-content: right;">
+            <div class="text" ><h1>Goal</h1></div>
+            <div><img src="Bilder/goal.png" width="500px"alt="goal-gold-2FrontSpotlights"></div>
+          </div>      
+          
+          <div class="wrapper">
+            <div class="text"><h1>Enemy base</h1></div>
+            <div><img src="Bilder/enemybase.png" width="500px"alt="enemybase-red-2FrontSpotlights"></div>
+          </div>
+        </div>
+      </main>
+
+      <!--position:fixed in position:relative und width in ändern, falls es ein Scrollbar gibt-->
+      <footer style="position: relative; left: 0;bottom: 0; width: auto;">
           <a>Copyright by Maze Runner © |</a>
-          <a style="color: grey;" href="impressum.html">Impressum</a>
-      </div>
+          <a class="impressum" style="color: grey;" href="impressum.html">Impressum</a>
+      </footer>
 
     </div>
 
 
+    <script src="script.js"></script> 
 
 
   </body>
