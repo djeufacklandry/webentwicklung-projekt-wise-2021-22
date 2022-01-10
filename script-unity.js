@@ -18,7 +18,7 @@ var canvas = document.querySelector("#unity-canvas");
 var loadingBar = document.querySelector("#unity-loading-bar");
 var progressBarFull = document.querySelector("#unity-progress-bar-full");
 var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-var mobileWarning = document.querySelector("#unity-mobile-warning");
+// var mobileWarning = document.querySelector("#unity-mobile-warning");
 
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
   container.className = "unity-mobile";

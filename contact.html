@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+
+    <!-- meta daten -->
+    <meta name="author" content="Giresse,Danial,Onur">
+    <meta name="description" content="Escape Game als Browsergame">
+    <meta name="keywords" content="Escape,Game,Browser,Contact">
+    <meta name="description" content="Gib uns direkt Feedback zum Spiel und nimm Kontakt zu uns auf!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--        -->
+
+    <title>Kontakt</title>
+
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="shortcut icon" href="CSS/favicon2.ico">
     <!--Press Start Font Family Für Start-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,44 +25,53 @@
     <div class="layout">
       <header>
         <nav>
-            <ul class="menu">
-                <li class="nav"><a href="index.html">Home</a></li>
-                <li class="nav"><a href="game.html">Maze Runner</a></li>
-                <li class="nav"><a href="about.html">About</a></li>
-                <li class="nav"><a class="activeNav" href="contact.html">Kontakt</a></li>
-            </ul>
+          <input type="checkbox" id="checkbox">
+            <label for="checkbox">
+              <ul class="menu" id="contact-nav">
+                  <li class="nav"><a href="index.html">Home</a></li>
+                  <li class="nav"><a href="game.html">Maze Runner</a></li>
+                  <li class="nav"><a href="about.html">Dev-Team</a></li>
+                  <li class="nav"><a class="activeNav" href="contact.html">Kontakt</a></li>
+              </ul>
+              <span class="toggle">☰</span>
+            </label>
         </nav>
       </header>
 
 
       <main>
 
-        
         <div id="user" class="center-content">            
            
           <form action="https://formsubmit.co/djeufacklandry@gmail.com" method="POST" >
               <h2>Kontaktieren Sie uns</h2>
-          <input type="text" name="from " class="space" id="name" placeholder="Dein Name" required>
-          <input type="email" name="email" class="space" id="email" placeholder="Deine E-Mail" required>
-          <input type="text" name="message" class="space" id="message" placeholder="hier schreiben" required>
-         
-          <button class ="bttn"> Senden </button>
-          </form>
-          
-        </div> 
+            <input type="text" name="from " class="space" id="name" placeholder="Dein Name" required>
+            <input type="email" name="email" class="space" id="email" placeholder="Deine E-Mail" required>
+            <input type="text" name="Fehler" class="space" id="name" placeholder="Fehlerbeschreibung" required>
 
+            <textarea type="text" name="message" class="space" id="message" placeholder="hier schreiben" required></textarea> 
+          
+            <button class ="bttn"> Senden </button>
+          </form>
+
+        </div> 
 
       </main>    
 
 
-      <footer class="no-content-footer">
-          <a>Copyright by Maze Runner ©</a>
-      </footer>
-
     </div>
 
 
+    <footer> 
+      <p>Copyright by Maze Runner © </p>
+  
 
+      <a href="https://de-de.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
+      <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+  
+  </footer>
 
   </body>
 

@@ -2,11 +2,15 @@
     --base-font-size: 16px;
 
 }
+/* smooth scrolling fuer home page */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    scroll-behavior: smooth;
 }
+
 .layout {
     display: grid;
     grid-template-areas: 
@@ -18,22 +22,22 @@ body {
 .layout-home {
     display: grid;
     grid-template-areas: 
-
         "hero hero hero"
         "menu menu menu"
         "main main main"
         "footer footer footer"
     ;
 }
-
-.showcase { 
+/*
+Full Screen Video Background
+https://www.youtube.com/watch?v=Gx_7GQtSdpc
+*/
+.showcase {
     grid-area: hero;
     position: relative;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    
     align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 0 20px;
     color: white;
@@ -42,11 +46,12 @@ body {
     margin-top: -8px;
     margin-bottom: 8px;
 
+    /* reverse column position for svg */
+    display: flex;
+    flex-direction: column-reverse;
 }
-/*
-Full Screen Video Background
-https://www.youtube.com/watch?v=Gx_7GQtSdpc
-*/
+
+
 .video-container {
     position: absolute;
     top: 0;
@@ -75,14 +80,68 @@ https://www.youtube.com/watch?v=Gx_7GQtSdpc
     height: 100%;
     background: rgba(0,0,0,0.1);
 }
+#nav-scroll {
+    text-align: center;
+}
+/* https://codepen.io/postor/pen/mskxI */
+
+/* 
+For iPhone Users: when the bottom browser navbar opens
+so the svg is not hidden by the browser navbar. It keeps
+its position with sticky above the nav
+*/
+.sticky-block {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+.arrows {
+    height: 75px;
+    width: 75px;
+    
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.arrows path {
+    fill: white;
+	stroke: black;
+
+	stroke-width: 1px;
+    /* Rolex animation time */
+    animation: 1s linear 0s infinite normal none running;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
 .content {
+    /* Zeiger anzeigen beim drüber hovern des buttons */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
     z-index: 1;
     font-family: 'Press Start 2P', cursive;
     -webkit-text-stroke: 1px black;
-    /*Font Size von Rolex Website*/
     font-size: 6vw;
 }
+
+
 header {
     grid-area: menu;
 }
@@ -100,28 +159,19 @@ nav {
 }
 main { 
     grid-area: main;
-    padding-top: 50px;
-    padding-bottom: 150px;
+    padding-top: 10.5vh;
+    padding-bottom: 16.1vh;
+
     text-align: center;
 }
-.no-content-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0; 
-    width: 100%;
-    
-}
+
 footer {   
-    grid-area: footer;  
+    grid-area: footer;
     background-color: #333;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative; 
+    padding-top: 30px; padding-bottom: 20px;
+    padding-left: 10px; padding-right: 10px;
     left: 0;
     bottom: 0; 
-    width: auto;
     text-align: center;
     color: white;
     font-size: 12px;
@@ -130,23 +180,14 @@ footer {
     margin-right: -8px;
 }
 
-
+.footer-icons {
+    padding-top: 12px;
+}
 .responsive-home-video {
     justify-content: center;
     max-width: 100%;
     height: auto;
 }
-
-.wrapper img {
-    max-width: 100%;
-    height: auto;
-}
-
-.center-content {
-    max-width: 970px;
-    margin: auto;
-}
-
 .wrapper {
     /* Text neben dem Bild anzeigen lassen */
     /* display: flex;*/
@@ -154,48 +195,85 @@ footer {
     border: 10px solid black;
     border-radius: 10px;
     margin-top: -9px;
-    font-size: 1rem;
     font-family: 'Press Start 2P', cursive;
 }
+.center-content {
+    max-width: 970px;
+    margin: auto;
+}
+.wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+figure img {
+    border: 5px solid rgb(0, 166, 196);
+    border-radius: 10px;
+    width: 200px; 
+    height: 200px;
+
+}
+.wrapper figure { 
+    padding-top: 40px;
+}
+.wrapper figcaption {
+    line-height: 1.75;
+    padding-top: 20px;
+}
+
+.wrapper li {
+    line-height: 1.3;
+}
+.wrapper ul {
+    font-size: 13px;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+    list-style-type: square;
+}
+.center-list {
+    display: flex;
+    justify-content: center;
+}
+
 .text {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 0.8em;
 }
 
 .headline {
-    text-align: left;
-    padding-left: 20px;
+    text-align: center;
     margin-bottom: -3px;
+    font-size: 28px;
 }
 
 
 
 /* Navigation Bar */
+/* https://www.w3schools.com/css/css_navbar_horizontal.asp */
 .activeNav {
     background-color: rgb(90, 90, 90);
 }
+
 
 ul.menu {
     align-items: center;
     list-style-type: none;
     margin: auto;
-    width: 85%;
+    width: 100%;
+
     overflow: hidden;
     background-color: #333;
-    border-radius: 0px 0px 30px 30px;
     justify-content: center;
     text-align: center;
-    position: sticky;
     z-index: 1;
     font-family: 'Press Start 2P', cursive;
     font-size: 17px;
 }
-  
+/*---------------------------------------- */
 li.nav {
-    float: none;
+    width: 100%;
     display: inline-block;
 }
 
@@ -211,54 +289,108 @@ li.nav a:hover {
     color: aqua;
     text-decoration: none;    
 }
-
-/* Für Links, damit der Unterstrich nur angezeigt wird, wenn mit der Maus drüber gegangen wird */
 a:link{
     text-decoration: none;
 }
+/* ------------------------------------------ */
+/* Responsive Navbar */
+.toggle {
+    border-radius: 0px 0px 30px 30px;
 
-.impressum:hover {
-    text-decoration: underline;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #333;
+    width: 100%;
+    align-self: center;
 }
-/*1920x1080px Dekstop */
-@media screen and (min-width: 694px) {
-    footer a {
-        font-size: 14px;
-
-    }
-    .content {
-        font-size: 4vw;
-    }
+label{
+    width: 100%;
 }
-/*375x667 IPhone 6*/
-/* @media screen and (min-width: 694px) {
+#checkbox {
+    width: 100%;
+    justify-content: center;
+}
 
-    .headline {
-        font-size: calc(1.175rem + 1.625vw);
-    }
-    .text {
-        font-size: 12px;
-    }
-    .container{
-        background-color:rgb(77, 60, 48);
-        display: flex;
-    }
-    .user{
-        border-radius: 40px;
-    }
+#checkbox:checked + label .menu {
+    height: 200px;
+}
+#checkbox:checked + label .toggle {
+    border-top: 2px solid black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0px;
+    padding-left: 0px;
+
+}
+
+
+#checkbox {
+    background-color: #333;
+    width: auto;
+    display: none;
+}
     
+ 
+#contact-nav {
+    margin-top: 0px;
+}
+/* Onur Soziale Medien Buttons / Design bearbeitet von Danial*/
+/* Jetson Aero Idee: https://www.jetsonaero.com/
+mit icons in den footer
+*/
+.fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px 20px 20px 20px;
+}
 
 
-} */
-/* Kontaktformular von Giresse */
+.fa:hover{
+    background-color: rgb(0, 202, 202);
+}
+.fa-facebook {
+    background-color: #333;
+    color: white;
+    border: 2px solid silver;
+
+}
+.fa-twitter {
+    background-color: #333;
+    color: white;
+    border: 2px solid silver;
+}
+.fa-youtube {
+    background-color: #333;
+    color: white;
+    border: 2px solid silver;
+}
+.fa-instagram {
+    background-color: #333;
+    color: white;
+    border: 2px solid silver;
+}
+
+
+/* ------------------------------------------ */
+
+
+/* Kontaktformular von Giresse / Design bearbeitet von Danial*/
 
 #user{
-    width: 100%;
     background-color:lightsteelblue;
     display: grid;
     border: 5px solid black;
     border-radius: 20px;
-    padding-right: 20px;
 }
 form{
     display:grid;
@@ -270,20 +402,23 @@ form{
     background-color: rgba(230, 230, 230, 0.6);
     padding:0.5rem 1rem;
     font-size: 1.1rem;
-    margin-bottom:22px;
+    margin-bottom: 22px;
     border-radius: 10px;
+}
+textarea {
+    resize: none;
 }
 #message{
     height: 150px;
 }
 .bttn{
     width:100%;
-    padding:0,5rem 1rem;    
+    padding: 0,5rem 1rem;
     background-color: #2ecc3b;
     color: #fff;
     font-size: 1.1rem;
-    border:none;
-    cursor:cell;
+    border: none;
+    cursor: cell;
     transition: .3s;
     border-radius: 40px;
  
@@ -294,30 +429,176 @@ form{
 
 
 
-/*For WebGL Unity Implementation*/
 
-.unity-box-spacer {
-    position: relative;
-    height: 800px;
+/* https://www.w3schools.com/howto/howto_js_collapsible.asp */
+/*Collapsible Content*/
+.collapsible {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none !important;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.center-content button {
+    color: black;
+}
+.collapsible:hover {
+    color: rgb(0, 179, 179);
+}
+  
+.collapsible:after {
+    transition: transform 0.5s;
+}
+  
+.active:after {
+    transform: rotateX(180deg);
+}
+  
+.content-collapse {
+    justify-content: center;
+    border-radius: 15px 15px;
+
+    margin-top: -1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 5s ease-out;
+}
+.content-collapse:after {
+    padding-top: 10px;
 }
 
-#unity-container {
-    position: absolute;
-    margin: auto;
+
+
+
+/*1920x1080px Dekstop */
+@media screen and (min-width: 800px) {
+
+    /* ------------------------------ */
+    footer {
+        justify-content: center;
+
+        display: flex;
+    }
+    footer p {
+        padding-right: 20px;
+    }
+    .footer-icons {
+        justify-content: center;
+        display: flex;
+    }
+
+    li.nav {
+        width: auto;
+        display: inline-block;
+    }
+    
+    ul.menu {
+        width: 85%;
+    }
+    label .menu li {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #checkbox:checked + label .menu {
+        height: 50px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        height: 50px;
+        border-radius: 0px 0px 30px 30px;
+
+    }
+    #checkbox, .toggle {
+        display: none;
+    }
+
+    .content {
+        font-size: 2.8vw;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .headline {
+        padding-left: 20px;
+        margin-bottom: -3px;
+        font-size: 35px;
+    }
+    /* Dev-Team: Text Rechts anzeigen lassen */
+    #text-center {
+        display: flex;
+    }
+    .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper ul {
+        justify-self: center;
+        text-align: left;
+        font-size: 15px;
+
+    }
+    .center-list {
+        margin: 0;
+        width: auto;
+        align-self: center;
+    }
+    .reverse-wrapper {
+        flex-direction: row-reverse;
+    }
+    #message{
+        min-height: 27.3vh;
+    }
+    
+
+    /*For WebGL Unity Implementation*/
+    /* Only show unity game when it's in desktop mode */
+    .unity-box-spacer { 
+        position: relative;
+        height: 800px;
+
+    }
+    
+    #unity-container {
+        position: absolute;
+        margin: auto;
+    
+    }
+
+
+    
+    #unity-container.unity-desktop {left: 50%; top: 50%; transform: translate(-50%, -50%) }
+    #unity-container.unity-mobile {width: 100%; height: 100% }
+    #unity-canvas {background: #FFFFFF; border: 10px solid black; border-radius: 50px;}
+    .unity-mobile #unity-canvas {width: 100%; height: 100% }
+    #unity-loading-bar {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+    #unity-logo {width: 154px; height: 130px; background: url('unity-logo-light.png') no-repeat center }
+    #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-light.png') no-repeat center }
+    #unity-progress-bar-full {width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-light.png') no-repeat center }
+    #unity-footer { position: relative }
+    .unity-mobile #unity-footer {display: none }
+    #unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+    #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+    #unity-fullscreen-button {float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+    #unity-mobile-warning {position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none; }
+    
 
 }
 
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas { background: #FFFFFF; border: 10px solid black; border-radius: 50px;}
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 154px; height: 130px; background: url('unity-logo-light.png') no-repeat center }
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-light.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-light.png') no-repeat center }
-#unity-footer { position: relative }
-.unity-mobile #unity-footer { display: none }
-#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
-#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
-#unity-mobile-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none; }
+@media screen and ( min-width: 1000px){
+    /* hide "lorem ipsum" when above 1000px */
+    .hide-content { display: none; }
+}
+@media screen and ( max-width: 1000px){
+    /* hide complete unity game when 1000px are reached */
+    .unity-box-spacer { 
+        display: none;
+        height: 800px;
+    }
+};
+

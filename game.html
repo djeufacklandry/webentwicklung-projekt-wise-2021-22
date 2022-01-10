@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+
+    <!-- meta daten -->
+    <meta name="author" content="Giresse,Danial,Onur">
+    <meta name="description" content="Escape Game als Browsergame">
+    <meta name="keywords" content="Escape,Game,Browser,Spiel">
+    <meta name="description" content="Klicke hier zum Startend des besten Browser Games!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--        -->
+    
+    <title>Game</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="shortcut icon" href="CSS/favicon2.ico">
     <!--Press Start Font Family Für Start-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +24,16 @@
     <div class="layout">
       <header>
         <nav>
-          <ul class="menu">
-            <li class="nav"><a href="index.html">Home</a></li>
-            <li class="nav"><a class="activeNav" href="game.html">Maze Runner</a></li>
-            <li class="nav"><a href="about.html">About</a></li>
-            <li class="nav"><a href="contact.html">Kontakt</a></li>
-          </ul>
+          <input type="checkbox" id="checkbox">
+            <label for="checkbox">
+              <ul class="menu" id="contact-nav">
+                  <li class="nav"><a href="index.html">Home</a></li>
+                  <li class="nav"><a class="activeNav" href="game.html">Maze Runner</a></li>
+                  <li class="nav"><a href="about.html">Dev-Team</a></li>
+                  <li class="nav"><a href="contact.html">Kontakt</a></li>
+              </ul>
+              <span class="toggle">☰</span>
+            </label>
         </nav>
       </header>
 
@@ -48,45 +61,84 @@
   
             
         </section>
+
+        
         <div class="center-content">
-          <div class="wrapper">
-            <h1 class="headline">User manual</h1>
-          </div>
-          <div class="wrapper">
-            <div class="text"><h1>Player</h1></div>
-            <div><img src="Bilder/player.png" width="500px"alt="player-orange-2FrontSpotlights"></div>
-          </div>
+          <p class="hide-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
+            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p class="hide-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
+            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p class="hide-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
+            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <button class="collapsible" >      
+            <div class="wrapper">
+              <h1 class="headline">User manual</h1>
+            </div>
+          </button>   
+          <div class="content-collapse" >
 
-          <div class="wrapper">
-            <div class="text"><h1>Enemy</h1></div>
-            <div><img src="Bilder/enemy.png" width="500px"alt="enemy-white-2BackSpotlights"></div>
-          </div>
+            <div class="wrapper">
+              <div class="text"><h1>Player</h1></div>
+              <div><img src="Bilder/player.png" width="500px"alt="player-orange-2FrontSpotlights"></div>
+            </div>
 
-          <div class="wrapper">
-            <div class="text"><h1>Start</h1></div>
-            <div><img src="Bilder/start.png" width="500px"alt="start-green-2FrontSpotlights"></div>
-          </div>
+            <div class="wrapper">
+              <div class="text"><h1>Enemy</h1></div>
+              <div><img src="Bilder/enemy.png" width="500px"alt="enemy-white-2BackSpotlights"></div>
+            </div>
 
-          <div class="wrapper">
-            <div class="text" ><h1>Goal</h1></div>
-            <div><img src="Bilder/goal.png" width="500px"alt="goal-gold-2FrontSpotlights"></div>
-          </div>      
-          
-          <div class="wrapper">
-            <div class="text"><h1>Enemy base</h1></div>
-            <div><img src="Bilder/enemybase.png" width="500px"alt="enemybase-red-2FrontSpotlights"></div>
+            <div class="wrapper">
+              <div class="text"><h1>Start</h1></div>
+              <div><img src="Bilder/start.png" width="500px"alt="start-green-2FrontSpotlights"></div>
+            </div>
+
+            <div class="wrapper">
+              <div class="text" ><h1>Goal</h1></div>
+              <div><img src="Bilder/goal.png" width="500px"alt="goal-gold-2FrontSpotlights"></div>
+            </div>      
+            
+            <div class="wrapper" id="hit-bottom">
+              <div class="text"><h1>Enemy base</h1></div>
+              <div><img src="Bilder/enemybase.png" width="500px"alt="enemybase-red-2FrontSpotlights"></div>
+            </div>
+
           </div>
         </div>
       </main>
 
-      <!--position:fixed in position:relative und width in ändern, falls es ein Scrollbar gibt-->
-      <footer>
-          <a>Copyright by Maze Runner ©</a>
-      </footer>
 
     </div>
+    <footer> 
+      <p>Copyright by Maze Runner © </p>
+  
+
+      <a href="https://de-de.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
+      <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+  
+  </footer>
 
 
+    <script src="script.js"></script> 
     <script src="script-unity.js"></script> 
 
 

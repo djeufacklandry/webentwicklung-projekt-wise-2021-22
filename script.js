@@ -1,10 +1,24 @@
-//defer als attrbute beim laden vom script
-// läuft erst wenn js geladen ist
-/*
-client height
-get höhe
-event handler 
-pfeil animation mit css (wenn noch zeit ist)
+// https://www.w3schools.com/howto/howto_js_collapsible.asp
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
 
-*/ 
+
+
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        document.getElementById("hit-bottom").scrollIntoView();
+
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        setTimeout(function(){
+          document.getElementById("hit-bottom").scrollIntoView();
+        }, 250); 
+    } 
+  });
+}
