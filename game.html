@@ -6,13 +6,12 @@
 
     <!-- meta daten -->
     <meta name="author" content="Giresse,Danial,Onur">
-    <meta name="description" content="Escape Game als Browsergame">
-    <meta name="keywords" content="Escape,Game,Browser,Spiel">
-    <meta name="description" content="Klicke hier zum Startend des besten Browser Games!">
+    <meta name="keywords" content="Escape,Game,Browser,Spiel,WebGL,Unity">
+    <meta name="description" content="Klicke hier zum Starten des besten Browser Games!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--        -->
     
-    <title>Game</title>
+    <title>Maze Runner | Game</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="CSS/favicon2.ico">
     <!--Press Start Font Family Für Start-->
@@ -25,6 +24,7 @@
       <header>
         <nav>
           <input type="checkbox" id="checkbox">
+            <!-- Markup validator Error, navbar ist aus der Vorlesung -->
             <label for="checkbox">
               <ul class="menu" id="contact-nav">
                   <li class="nav"><a href="index.html">Home</a></li>
@@ -41,7 +41,8 @@
             
 
       <main>
-        <section class="unity-box-spacer">
+        <!-- Hide Unity Game when it reaches Smartphone Size -->
+        <div class="unity-box-spacer">  
           <div id="unity-container" class="unity-desktop">
             <canvas id="unity-canvas"></canvas>
             <div id="unity-loading-bar">
@@ -60,10 +61,12 @@
           </div>
   
             
-        </section>
+        </div>
 
         
-        <div class="center-content">
+        <section class="center-content">
+          <!--  Show hidden content to fill the unity Game space, 
+                when it reaches Smartphone Size -->
           <p class="hide-content">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
@@ -88,40 +91,38 @@
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
             Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
-          <button class="collapsible" >      
-            <div class="wrapper">
-              <h1 class="headline">User manual</h1>
-            </div>
+          <button class="collapsible headline">      
+              User manual
           </button>   
           <div class="content-collapse" >
 
             <div class="wrapper">
               <div class="text"><h1>Player</h1></div>
-              <div><img src="Bilder/player.png" width="500px"alt="player-orange-2FrontSpotlights"></div>
+              <div><img class="game-img" src="Bilder/player.png" alt="player-orange-2FrontSpotlights"></div>
             </div>
 
             <div class="wrapper">
               <div class="text"><h1>Enemy</h1></div>
-              <div><img src="Bilder/enemy.png" width="500px"alt="enemy-white-2BackSpotlights"></div>
+              <div><img class="game-img" src="Bilder/enemy.png" alt="enemy-white-2BackSpotlights"></div>
             </div>
 
             <div class="wrapper">
               <div class="text"><h1>Start</h1></div>
-              <div><img src="Bilder/start.png" width="500px"alt="start-green-2FrontSpotlights"></div>
+              <div><img class="game-img" src="Bilder/start.png" alt="start-green-2FrontSpotlights"></div>
             </div>
 
             <div class="wrapper">
               <div class="text" ><h1>Goal</h1></div>
-              <div><img src="Bilder/goal.png" width="500px"alt="goal-gold-2FrontSpotlights"></div>
+              <div><img class="game-img" src="Bilder/goal.png" alt="goal-gold-2FrontSpotlights"></div>
             </div>      
             
             <div class="wrapper" id="hit-bottom">
               <div class="text"><h1>Enemy base</h1></div>
-              <div><img src="Bilder/enemybase.png" width="500px"alt="enemybase-red-2FrontSpotlights"></div>
+              <div><img class="game-img" src="Bilder/enemybase.png" alt="enemybase-red-2FrontSpotlights"></div>
             </div>
 
           </div>
-        </div>
+        </section>
       </main>
 
 
